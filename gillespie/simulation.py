@@ -4,13 +4,13 @@ import random
 
 def run(initials, propensities, stoichiometry, duration):
     """
-    
+    Run a simulation with given model.
 
-    :param initials:
-    :param propensities:
-    :param stoichiometry:
-    :param duration:
-    :return:
+    :param initials: List of initial population counts.
+    :param propensities: List of functions that take population counts and give transition rates.
+    :param stoichiometry: List of integers, how the population counts change per transition.
+    :param duration: Maximum simulation time.
+    :return: Two lists: The time points and population counts per time point.
     """
 
     # initial values
@@ -22,20 +22,20 @@ def run(initials, propensities, stoichiometry, duration):
         # get current state
         state = counts[-1]
 
-        # calculate weights with respective propensities
-        weights = [prop(*state) for prop in propensities]
+        # calculate rates with respective propensities
+        rates = [prop(*state) for prop in propensities]
 
         # stop loop if no transitions available
-        if all(w == 0 for w in weights):
+        if all(w == 0 for w in rates):
             break
 
         # randomly draw one transition
-        transition = random.choices(stoichiometry, weights=weights)[0]
+        transition = random.choices(stoichiometry, weights=rates)[0]
         next_state = [a + b for a, b in zip(state, transition)]
 
         # draw next time increment from random exponential distribution
         # dt = math.log(1.0 / random.random()) / sum(weights)
-        dt = -math.log(random.random()) / sum(weights)
+        dt = -math.log(random.random()) / sum(rates)
 
         # append new values
         times.append(times[-1] + dt)
