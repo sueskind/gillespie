@@ -14,7 +14,7 @@ See [examples](examples)
 
 ## Development
 
-To include/exclude relevant files from source distribution `check-manifest` is needed. Install the dependencies with:
+Install the development dependencies with:
 
 ```bash
 pip install -e .[dev]
