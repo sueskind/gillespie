@@ -1,6 +1,9 @@
 # IDE
 .idea/
 
+# environment
+venv/
+
 # Build
 build/
 dist/
