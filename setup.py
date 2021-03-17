@@ -22,11 +22,5 @@ setup(
     ],
     url="https://github.com/sueskind/gillespie",
     author="sueskind",
-    author_email="52210599+sueskind@users.noreply.github.com",
-    extras_require={
-        "dev": [
-            "check-manifest~=0.46",
-            "twine~=3.4.0"
-        ]
-    }
+    author_email="52210599+sueskind@users.noreply.github.com"
 )
