@@ -1,7 +1,7 @@
 import random
 import timeit
 
-import src as gillespie
+import gillespie
 
 if __name__ == '__main__':
     # SIR epidemic model for benchmarking
