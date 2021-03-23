@@ -1,4 +1,5 @@
 import gillespie
+import matplotlib.pyplot as plt
 
 if __name__ == '__main__':
     N = 50  # whole population
@@ -14,4 +15,16 @@ if __name__ == '__main__':
     stoichiometry = [[-1, 1, 0],  # S -> I, Population change: S-1, I+1, R+0
                      [0, -1, 1]]  # I -> R Population change: S+0, I-1, R+1
 
-    gillespie.simulate(initials, propensities, stoichiometry, t)
+    t, SIR = gillespie.simulate(initials, propensities, stoichiometry, t)
+    S, I, R = zip(*SIR)
+
+    plt.plot(t, S, label="susceptible")
+    plt.plot(t, I, label="infected")
+    plt.plot(t, R, label="recovered")
+
+    plt.title("SIR epidemic model")
+    plt.xlabel("Days")
+    plt.ylabel("Population")
+    plt.legend()
+
+    plt.savefig("plots/SIR.png")
