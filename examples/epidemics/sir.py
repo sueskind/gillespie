@@ -1,6 +1,5 @@
+import gillespie
 import matplotlib.pyplot as plt
-
-import src as gillespie
 
 if __name__ == '__main__':
     N = 500  # whole population
