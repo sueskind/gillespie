@@ -1,13 +1,15 @@
-import gillespie
 import matplotlib.pyplot as plt
 
+import src as gillespie
+
 if __name__ == '__main__':
-    N = 50  # whole population
+    N = 500  # whole population
     beta = 2  # transmission rate
     gamma = 0.5  # recovery rate
     t = 15  # duration
 
-    initials = [47, 3, 0]  # S, I, R
+    I0 = 3
+    initials = [N - I0, I0, 0]  # S, I, R
 
     propensities = [lambda s, i, r: beta * s * i / N,  # S -> I, Propensity: b * S(t) * I(t) / N
                     lambda s, i, r: gamma * i]  # I -> R Propensity: g * I(t)
