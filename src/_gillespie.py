@@ -1,4 +1,3 @@
-import math
 import random
 
 
@@ -35,7 +34,7 @@ def simulate(initials, propensities, stoichiometry, duration):
 
         # draw next time increment from random exponential distribution
         # dt = math.log(1.0 / random.random()) / sum(weights)
-        dt = -math.log(random.random()) / sum(rates)
+        dt = random.expovariate(sum(rates))
 
         # append new values
         times.append(times[-1] + dt)
