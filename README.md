@@ -6,6 +6,12 @@ The [Gillespie algorithm](https://en.wikipedia.org/wiki/Gillespie_algorithm) is 
 processes. Even though it was developed in the context of chemical reactions, this algorithm can be applied to many
 fields of research, e.g. chemistry, biology, epidemiology, ...
 
+## Installation
+
+```bash
+pip install gillespie
+```
+
 ## Usage
 
 First you must define in what states the populations of your system can be. Then you model your system using three
@@ -60,10 +66,4 @@ See [examples](examples).
 
 ```bash
 pip install matplotlib
-```
-
-## Installation
-
-```bash
-pip install gillespie
 ```
