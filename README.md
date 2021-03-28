@@ -17,7 +17,7 @@ pip install gillespie
 First you must define in what states the populations of your system can be. Then you model your system using three
 domains:
 
-#### Initial values
+#### 1. Initial values
 
 A list of initial values for your states:
 
@@ -27,7 +27,7 @@ initials = [290, 10, 0]
 
 *Here we have three states in our population.*
 
-#### Propensities
+#### 2. Propensities
 
 A list of functions that, given the values of your current states, compute the transition rate of a reaction:
 
@@ -38,7 +38,7 @@ propensities = [lambda s, i, r: 2 * s * i / 300,
 
 *Here we have two reactions that each take current states as input.*
 
-#### Stoichiometry
+#### 3. Stoichiometry
 
 A list of incremental/decremental values for each reaction for each state:
 
@@ -50,7 +50,7 @@ stoichiometry = [[-1, 1, 0],
 *Here the first reaction would decrement the first state and increment the second one. The second reaction would
 decrement the second state and increment the third.*
 
-#### Run simulation
+#### 4. Run simulation
 
 ```python
 import gillespie
