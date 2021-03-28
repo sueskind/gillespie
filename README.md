@@ -36,7 +36,7 @@ propensities = [lambda s, i, r: 2 * s * i / 300,
                 lambda s, i, r: 0.5 * i]
 ```
 
-*Here we have two reactions that each take current states as input.*
+*Here we have two reactions that each take the three current states as input.*
 
 #### 3. Stoichiometry
 
@@ -58,7 +58,7 @@ import gillespie
 times, measurements = gillespie.simulate(initials, propensities, stoichiometry, duration=15)
 ```
 
-#### Examples
+## Examples
 
 See [examples](examples).
 
