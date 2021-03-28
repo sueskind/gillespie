@@ -1,4 +1,4 @@
-# gillespie
+![gillespie](gillespie.png)
 
 Python package for stochastic simulations
 
