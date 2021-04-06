@@ -58,6 +58,8 @@ import gillespie
 times, measurements = gillespie.simulate(initials, propensities, stoichiometry, duration=15)
 ```
 
+*Times contains all the time steps where a reaction occured. And measurements is a list of triplets with the SIR measurements in this case.*
+
 ## Examples
 
 See [examples](examples).
