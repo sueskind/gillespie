@@ -8,6 +8,8 @@ fields of research, e.g. chemistry, biology, epidemiology, ...
 
 ## Installation
 
+Available on [pypi.org](https://pypi.org/project/gillespie/), install via pip:
+
 ```bash
 pip install gillespie
 ```
