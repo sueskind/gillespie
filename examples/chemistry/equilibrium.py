@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 import src as gillespie
 
 if __name__ == '__main__':
-    forward = 2  # forward reaction rate
-    backward = 0.5  # backward reaction rate
+    forward = 0.01  # forward reaction rate
+    backward = 0.005  # backward reaction rate
     t = 15  # duration
 
     initials = [100, 150, 0]  # X, Y, XY
