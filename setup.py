@@ -5,12 +5,12 @@ with open("README.md", "r") as f:
 
 setup(
     name="gillespie",
-    version="0.0.1",
+    version="0.0.2",
     description="Pure Python implementation of the Gillespie algorithm for stochastic simulations.",
     long_description=readme,
     long_description_content_type="text/markdown",
-    py_modules=["gillespie"],
-    package_dir={"": "src"},
+    package_dir={"gillespie": "src"},
+    packages=["gillespie"],
     classifiers=[
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.6",
