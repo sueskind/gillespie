@@ -33,4 +33,4 @@ if __name__ == '__main__':
     plt.ylabel("Population")
     plt.legend()
 
-    plt.savefig("plots/SEIR.png")
+    plt.savefig("SEIR.png")

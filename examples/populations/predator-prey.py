@@ -29,4 +29,4 @@ if __name__ == '__main__':
     plt.ylabel("Population")
     plt.legend()
 
-    plt.savefig("plots/predator-prey.png")
+    plt.savefig("predator-prey.png")

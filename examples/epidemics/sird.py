@@ -1,5 +1,6 @@
-import gillespie
 import matplotlib.pyplot as plt
+
+import src as gillespie
 
 if __name__ == '__main__':
     N = 500  # whole population
@@ -32,4 +33,4 @@ if __name__ == '__main__':
     plt.ylabel("Population")
     plt.legend()
 
-    plt.savefig("plots/SIRD.png")
+    plt.savefig("SIRD.png")

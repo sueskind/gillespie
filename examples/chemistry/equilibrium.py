@@ -27,4 +27,4 @@ if __name__ == '__main__':
     plt.ylabel("Number of molecules")
     plt.legend()
 
-    plt.savefig("plots/equilibrium.png")
+    plt.savefig("equilibrium.png")

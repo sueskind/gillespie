@@ -66,8 +66,17 @@ times, measurements = gillespie.simulate(initials, propensities, stoichiometry, 
 
 See [examples](examples).
 
-**Note**: `matplotlib` must be installed to run the examples:
+To run the examples yourself the `gillespie` package is not needed to be installed. However, you will need to install
+`matplotlib`:
 
 ```bash
 pip install matplotlib
 ```
+
+Then, clone the repo and run an example from the project root directory e.g. via:
+
+```shell
+python examples/epidemics/sir.py
+```
+
+The output plot will then be created in your working directory.
