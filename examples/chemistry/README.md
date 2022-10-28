@@ -11,3 +11,5 @@ We have two chemical elements `X` and `Y` that reversibly react to an `XY` molec
 X + Y -> XY
 XY    -> X + Y
 ```
+
+![equilibrium.png](plots/equilibrium.png)
